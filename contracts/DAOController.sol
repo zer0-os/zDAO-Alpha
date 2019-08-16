@@ -39,11 +39,11 @@ contract DAOController {
     }
 
 
-    function getNeurons() view public returns(address[] memory) {
+    function getNeurons() public view returns(address[] memory) {
         return neuronList;
     }
 
-    function getNeuron(address _neuronAddress) view public returns (string memory, uint, bytes4) {
+    function getNeuron(address _neuronAddress) public view returns (string memory, uint, bytes4) {
         return(neurons[_neuronAddress].neuronName, neurons[_neuronAddress].listPointer, neurons[_neuronAddress].permissions);
     }
 
@@ -105,37 +105,37 @@ contract DAOController {
     // Modifiers
 
     modifier isActiveNeuron() {
-        require(neurons[msg.sender].neuronAddress == msg.sender);
+        require(neurons[msg.sender].neuronAddress == msg.sender, "Permissiono Error: Neuron not Active");
         _;
     }
 
     modifier PermissionToMintToken() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToMintToken");
         _;
     }
 
     modifier PermissionToBurnToken() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToBurnToken");
         _;
     }
 
     modifier PermissionToTransferToken() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToTransferToken");
         _;
     }
 
     modifier PermissionToApproveToken() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToApproveToken");
         _;
     }
 
     modifier PermissionToActivateNeuron() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToActivateNeuron");
         _;
     }
 
     modifier PermissionToDeactivateNeuron() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010));
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToDeactivateNeuron");
         _;
     }
 

@@ -22,7 +22,7 @@ contract DAO is Ownable {
     function() external payable {
         emit ReceiveEther(msg.sender, msg.value);
     }
-    function sendEther(address payable _to, uint256 _amountInWei) 
+    function sendEther(address payable _to, uint256 _amountInWei)
     public onlyOwner returns(bool) { //add back OnlyOwner
         _to.transfer(_amountInWei);
         emit SendEther(_to, _amountInWei);
