@@ -31,9 +31,9 @@ contract DAOToken is ERC20, Ownable  {
         Mint(0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920, 50000);
     }
 
-    function Mint(address _to, uint256 _amount) public onlyOwner returns(bool) { //
+    function Mint(address _to, uint256 _amount) public onlyOwner returns(bool) {
         if (cap > 0)
-            require(totalSupply().add(_amount) <= cap);
+            require(totalSupply().add(_amount) <= cap, "Error: totalSupply() cannot exceed cap");
         _mint(_to, _amount);
         return true;
     }

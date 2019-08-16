@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
-import "./DAO.sol";
-import "./DAOController.sol";
+import "../controller/DAO.sol";
+import "../controller/DAOController.sol";
 
 contract SpawnController {
 

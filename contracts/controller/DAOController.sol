@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
 import "./DAO.sol";
-import "./SpawnDAO.sol";
+import "../spawn/SpawnDAO.sol";
 
 contract DAOController {
 
@@ -31,7 +31,6 @@ contract DAOController {
         dao = _dao;
         valueToken = dao.valueToken();
         votingToken = dao.votingToken();
-        //schemes[msg.sender] = Scheme({paramsHash: bytes32(0), permissions: bytes4(0x0000001F)});
     }
 
     function getName() public view PermissionToTransferToken() returns (bytes32) {

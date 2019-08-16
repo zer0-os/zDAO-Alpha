@@ -1,7 +1,7 @@
 pragma solidity ^0.5.0;
 
-import "./DAO.sol";
-import "./DAOToken.sol";
+import "../controller/DAO.sol";
+import "../controller/DAOToken.sol";
 import "./SpawnController.sol";
 
 contract SpawnDAO {
@@ -28,8 +28,6 @@ contract SpawnDAO {
             _cap);
     }
 
-    // a private function is called here due to a stack error
-
     function _spawn (
         bytes32 _daoName,
         string memory _tokenName,
@@ -38,11 +36,11 @@ contract SpawnDAO {
         uint256 _cap
     ) private returns(address)
     {
-        // Create Token and Avatar:
+        // Create Token and associated DAO:
         DAOToken daoToken = new DAOToken(_tokenName, _tokenSymbol, _cap, false);
         DAO dao = new DAO(_daoName, daoToken);
 
-        // Mint token and reputation for Stewards:
+        // Mint initial token for Stewards:
 
         // Create Controller:
         daoController = spawnController.create(dao);
