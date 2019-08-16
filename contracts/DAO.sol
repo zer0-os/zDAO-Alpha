@@ -1,12 +1,6 @@
 pragma solidity ^0.5.0;
 
 import "./DAOToken.sol";
-// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-// import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-// import "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol";
-// import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
-// import "@openzeppelin/contracts/ownership/Ownable.sol";
 
 contract DAO is Ownable {
 
@@ -35,11 +29,11 @@ contract DAO is Ownable {
         return true;
     }
 
-    function externalTokenTransfer(address _to, uint256 _value)
+    function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
     public onlyOwner returns(bool)
     {
         valueToken.transfer(_to, _value);
-        // emit ExternalTokenTransfer(address(_externalToken), _to, _value);
+        emit ExternalTokenTransfer(address(_externalToken), _to, _value);
         return true;
     }
 

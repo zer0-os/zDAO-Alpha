@@ -19,14 +19,13 @@ contract DAOController {
     mapping(address => Neuron) neurons;
     address[] public neuronList;
 
-    // event MintReputation (address indexed _sender, address indexed _to, uint256 _amount);
-    // event BurnReputation (address indexed _sender, address indexed _from, uint256 _amount);
-    event MintTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
-    // event RegisterScheme (address indexed _sender, address indexed _scheme);
-    // event UnregisterScheme (address indexed _sender, address indexed _scheme);
-    // event UpgradeController(address indexed _oldController, address _newController);
     // event AddGlobalConstraint(address indexed _globalConstraint, bytes32 _params, GlobalConstraintInterface.CallPhase _when);
     // event RemoveGlobalConstraint(address indexed _globalConstraint, uint256 _index, bool _isPre);
+    event MintTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
+    event BurnTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
+    event ActivateNeuron (address indexed _sender, address indexed _neuron);
+    event DeactivateNeuron (address indexed _sender, address indexed neuron);
+    // event UpgradeController(address indexed _oldController, address _newController);
 
     constructor(DAO _dao) public {
         dao = _dao;
@@ -54,6 +53,7 @@ contract DAOController {
         neurons[_neuronAddress].permissions = _permissions;
         neuronList.push(_neuronAddress);
         neurons[_neuronAddress].listPointer = neuronList.length-1;
+        emit ActivateNeuron (msg.sender, _neuronAddress);
         return true;
     }
 
@@ -64,6 +64,7 @@ contract DAOController {
         neurons[rowToMove].listPointer = rowToDelete;
         neuronList.length--;
         delete neurons[_neuronAddress];
+        emit DeactivateNeuron(msg.sender, _neuronAddress);
         return true;
     }
 
@@ -77,11 +78,11 @@ contract DAOController {
 
     // burn burnTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
 
-    function externalTokenTransfer(address _to, uint256 _value)
+    function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
     external
     returns(bool)
     {
-        return dao.externalTokenTransfer(_to, _value);
+        return dao.externalTokenTransfer(_externalToken, _to, _value);
     }
 
     function externalTokenTransferFrom(IERC20 _externalToken, address _from, address _to, uint256 _value)

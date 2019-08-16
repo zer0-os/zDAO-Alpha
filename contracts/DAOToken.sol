@@ -31,11 +31,20 @@ contract DAOToken is ERC20, Ownable  {
         Mint(0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920, 50000);
     }
 
-    function Mint(address _to, uint256 _amount) public returns(bool) { //onlyOwner
+    function Mint(address _to, uint256 _amount) public onlyOwner returns(bool) { //
         if (cap > 0)
             require(totalSupply().add(_amount) <= cap);
         _mint(_to, _amount);
         return true;
+    }
+
+    function Burn(uint256 _amount) public onlyOwner returns(bool) {
+        _burn(msg.sender, _amount);
+        return true;
+    }
+
+    function burnFrom(address _account, uint256 _amount) public onlyOwner returns(bool) {
+        _burnFrom(_account, _amount);
     }
 
     function() external payable {
@@ -43,6 +52,3 @@ contract DAOToken is ERC20, Ownable  {
         emit received("transfer received");
     }
 }
-
-// remember to isMinterRole back to OZ contract for secruity reasons
-// import "@openzeppelin/contracts/access/roles/MinterRole.sol";
