@@ -2,7 +2,8 @@ let DAOToken = artifacts.require("./DAOToken.sol");
 let DAO = artifacts.require("./DAO.sol");  
 let DAOController = artifacts.require("./DAOController.sol"); 
 let SpawnController = artifacts.require("./SpawnController.sol");
-let SpawnDAO = artifacts.require("./SpawnDAO.sol") ;
+let SpawnDAO = artifacts.require("./SpawnDAO.sol");
+let TokenMinter = artifacts.require("./TokenMinter");
 
 let daoName = "0x44414f0000000000000000000000000000000000000000000000000000000000";
 let tokenName = "Infinity";
@@ -25,16 +26,18 @@ module.exports = function(deployer) {
     // Init Controller for DAO
     let da = await spawnDAO.daoController();
     let dc = await DAOController.at(da);
+    console.log("dc: " + dc.address);
+
+    // Mint Tokens
+    let mt = await deployer.deploy(TokenMinter, dc.address);
+    let tmDeployed = await TokenMinter.deployed();
+    console.log("tm: " + tmDeployed.address);
 
     // Init Default Neurons
-    dc.activateNeuron("0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", "red", "0x00000008");
-    dc.activateNeuron("0xAf7e9f4b769092d8beeBc9A2330624F63e4271f1", "blue", "0x00000012");
-    dc.activateNeuron("0xbf5cbdE7fDF0b5fA09ce61E50Ad46632a09312E9", "green", "0x00000012");
-    dc.activateNeuron("0x9A2761D41F437818D2027442D89c4D056Ddc77Ae", "cyan", "0x00000012");
-    dc.activateNeuron("0xf100ad39337A0191482A65A4A80EDb709e9128cC", "purple", "0x00000012");
-    dc.activateNeuron("0xFB8D16e71B21d5a889612aE16e7872A4de0Fcd98", "pink", "0x00000012");
-    dc.activateNeuron("0x54fE623b2a3f5580a4bCB7579248b409C2540e50", "black", "0x00000012");
-    console.log(dc.address);
+    dc.activateNeuron(dc.address, "DAOController", "0x00000010");
+    dc.activateNeuron(tmDeployed.address, "TokenMinter", "0x00000010");
+
+    tmDeployed.MintTokens("0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 1337);
   });
 };
 

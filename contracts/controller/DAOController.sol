@@ -13,8 +13,7 @@ contract DAOController {
     }
 
     DAO public dao;
-    DAOToken public valueToken;
-    DAOToken public votingToken;
+    DAOToken public daoToken;
 
     mapping(address => Neuron) neurons;
     address[] public neuronList;
@@ -30,14 +29,12 @@ contract DAOController {
 
     constructor(DAO _dao) public {
         dao = _dao;
-        valueToken = dao.valueToken();
-        votingToken = dao.votingToken();
+        daoToken = dao.daoToken();
     }
 
     function getName() public view PermissionToTransferToken() returns (bytes32) {
         return dao.daoName();
     }
-
 
     function getNeurons() public view returns(address[] memory) {
         return neuronList;
@@ -47,7 +44,10 @@ contract DAOController {
         return(neurons[_neuronAddress].neuronName, neurons[_neuronAddress].listPointer, neurons[_neuronAddress].permissions);
     }
 
-    function activateNeuron (address _neuronAddress, string calldata _neuronName, bytes4 _permissions) external returns(bool) {
+    function activateNeuron (address _neuronAddress, string calldata _neuronName, bytes4 _permissions)
+    external
+    // PermissionToActivateNeuron()
+    returns(bool) {
         neurons[_neuronAddress].neuronAddress = _neuronAddress;
         neurons[_neuronAddress].neuronName = _neuronName;
         neurons[_neuronAddress].permissions = _permissions;
@@ -57,7 +57,10 @@ contract DAOController {
         return true;
     }
 
-    function deactivateNeuron(address _neuronAddress) external returns(bool) {
+    function deactivateNeuron(address _neuronAddress)
+    external
+    PermissionToDeactivateNeuron()
+    returns(bool) {
         uint rowToDelete = neurons[_neuronAddress].listPointer;
         address rowToMove = neuronList[neuronList.length-1];
         neuronList[rowToDelete] = rowToMove;
@@ -70,30 +73,34 @@ contract DAOController {
 
     function mintTokens(address _dao, address _beneficiary, uint256 _amount)
     external
+    PermissionToMintToken()
     returns(bool)
     {
         emit MintTokens(msg.sender, _beneficiary, _amount); //add isvalidDao
-        return valueToken.Mint(_beneficiary, _amount);
+        return daoToken.Mint(_beneficiary, _amount);
     }
 
     function burnTokens (address _dao, uint256 _amount)
     external //add isvalidDao
+    PermissionToBurnToken()
     returns(bool)
     {
         emit BurnTokens(msg.sender, _amount);
-        return valueToken.Burn(_amount);
+        return daoToken.Burn(_amount);
     }
 
     function burnTokensFrom (address _dao, address _account, uint256 _amount)
     external //add isvalidDao
+    PermissionToBurnToken()
     returns(bool)
     {
         emit BurnTokensFrom(msg.sender, _account, _amount);
-        return valueToken.BurnFrom(_account, _amount);
+        return daoToken.BurnFrom(_account, _amount);
     }
 
     function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
     external
+    PermissionToBurnToken()
     returns(bool)
     {
         return dao.externalTokenTransfer(_externalToken, _to, _value);
@@ -101,7 +108,7 @@ contract DAOController {
 
     function externalTokenTransferFrom(IERC20 _externalToken, address _from, address _to, uint256 _value)
     external
-    PermissionToTransferToken()
+    PermissionToTransferTokenFrom()
     returns(bool)
     {
         return dao.externalTokenTransferFrom(_externalToken, _from, _to, _value);
@@ -109,6 +116,7 @@ contract DAOController {
 
     function externalTokenApproval(IERC20 _externalToken, address _spender, uint256 _value)
     external
+    PermissionToApproveToken()
     returns(bool)
     {
         return dao.externalTokenApproval(_externalToken, _spender, _value);
@@ -120,6 +128,16 @@ contract DAOController {
 
     modifier isActiveNeuron() {
         require(neurons[msg.sender].neuronAddress == msg.sender, "Permissiono Error: Neuron not Active");
+        _;
+    }
+
+    modifier PermissionToActivateNeuron() {
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToActivateNeuron");
+        _;
+    }
+
+    modifier PermissionToDeactivateNeuron() {
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToDeactivateNeuron");
         _;
     }
 
@@ -138,19 +156,13 @@ contract DAOController {
         _;
     }
 
+    modifier PermissionToTransferTokenFrom() {
+        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToTransferTokenFrom");
+        _;
+    }
+
     modifier PermissionToApproveToken() {
         require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToApproveToken");
         _;
     }
-
-    modifier PermissionToActivateNeuron() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToActivateNeuron");
-        _;
-    }
-
-    modifier PermissionToDeactivateNeuron() {
-        require(neurons[msg.sender].permissions&bytes4(0x00000010) == bytes4(0x00000010), "Permission Error: PermissionToDeactivateNeuron");
-        _;
-    }
-
 }

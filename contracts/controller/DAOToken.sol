@@ -27,8 +27,6 @@ contract DAOToken is ERC20, Ownable  {
         symbol = _symbol;
         cap = _cap;
         isTransferable = _isTransferable;
-
-        Mint(0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920, 50000);
     }
 
     function Mint(address _to, uint256 _amount) public onlyOwner returns(bool) {
