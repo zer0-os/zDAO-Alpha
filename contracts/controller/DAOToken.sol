@@ -43,7 +43,7 @@ contract DAOToken is ERC20, Ownable  {
         return true;
     }
 
-    function burnFrom(address _account, uint256 _amount) public onlyOwner returns(bool) {
+    function BurnFrom(address _account, uint256 _amount) public onlyOwner returns(bool) {
         _burnFrom(_account, _amount);
     }
 

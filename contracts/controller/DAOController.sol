@@ -22,7 +22,8 @@ contract DAOController {
     // event AddGlobalConstraint(address indexed _globalConstraint, bytes32 _params, GlobalConstraintInterface.CallPhase _when);
     // event RemoveGlobalConstraint(address indexed _globalConstraint, uint256 _index, bool _isPre);
     event MintTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
-    event BurnTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
+    event BurnTokens (address indexed _sender, uint256 _amount);
+    event BurnTokensFrom (address indexed _sender, address indexed _account, uint256 _amount);
     event ActivateNeuron (address indexed _sender, address indexed _neuron);
     event DeactivateNeuron (address indexed _sender, address indexed neuron);
     // event UpgradeController(address indexed _oldController, address _newController);
@@ -67,15 +68,29 @@ contract DAOController {
         return true;
     }
 
-    function mintTokens(address _avatar, address _beneficiary, uint256 _amount)
+    function mintTokens(address _dao, address _beneficiary, uint256 _amount)
     external
     returns(bool)
     {
-        emit MintTokens(msg.sender, _beneficiary, _amount);
+        emit MintTokens(msg.sender, _beneficiary, _amount); //add isvalidDao
         return valueToken.Mint(_beneficiary, _amount);
     }
 
-    // burn burnTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
+    function burnTokens (address _dao, uint256 _amount)
+    external //add isvalidDao
+    returns(bool)
+    {
+        emit BurnTokens(msg.sender, _amount);
+        return valueToken.Burn(_amount);
+    }
+
+    function burnTokensFrom (address _dao, address _account, uint256 _amount)
+    external //add isvalidDao
+    returns(bool)
+    {
+        emit BurnTokensFrom(msg.sender, _account, _amount);
+        return valueToken.BurnFrom(_account, _amount);
+    }
 
     function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
     external
