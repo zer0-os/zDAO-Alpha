@@ -40,22 +40,26 @@ module.exports = function(deployer) {
     dc.activateNeuron(tmDeployed.address, "TokenMinter", "0x00000010");
 
     // tmDeployed.MintTokens(da, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 1337);
-
+    
     
     //Deploy Choice
     let daoToken = await dc.daoToken();
     let dao = await dc.dao();
 
-    let choiceInstance = await deployer.deploy(Choice, dao, daoToken, 2);
-    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dao, daoToken, "0xAf7e9f4b769092d8beeBc9A2330624F63e4271f1", 3457);
+    // let DAOTokenInstance = await DAOToken.at(daoToken);
+    // let DAOInstance = await DAO.at(dao);
+
+    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dao, daoToken, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
+    // let choiceInstance = await deployer.deploy(Choice, dao, daoToken, 1, mintTokenChoice.address);
 
     //Console.log
     let a = await console.log("dc: " + dc.address);
     let b = await console.log("tm: " + tmDeployed.address);
     let c = console.log("dt: " + await dc.daoToken());
     let d = console.log("dao: " + await dc.dao());
-    let e = console.log("c: " + await choiceInstance.address);
+    // let e = console.log("c: " + await choiceInstance.address);
     let f = console.log("mtc: " + await mintTokenChoice.address);
+    // let g = console.log(DAOInstance);
 
   });
 };

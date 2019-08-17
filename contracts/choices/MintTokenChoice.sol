@@ -6,20 +6,20 @@ import "../controller/DAO.sol";
 import "../controller/DAOController.sol";
 
 
-contract MintTokenChoice {
+contract MintTokenChoice is ChoiceType {
 
-    DAO dao;
-    DAOToken daoToken;
-    DAOController daoController;
-    // MintTokenChoice mtc;
-    
-    Choice choice = new Choice(dao, daoToken, 2); //mtc
+    DAO public dao;
+    DAOToken public daoToken;
+    DAOController public daoController;
+    Choice choice;
+    address choiceAddress;
 
     event MintTokensEvent(DAO _dao, address _beneficiary, uint256 _amount);
 
     struct MintTokensToAddress {
-        address benefiary;
+        address beneficiary;
         uint256 amount;
+        string status;
     }
 
     MintTokensToAddress mintTokensToAddress;
@@ -27,13 +27,24 @@ contract MintTokenChoice {
     constructor(DAO _dao, DAOToken _daoToken, address _beneficiary, uint256 _amount) public {
         dao = _dao;
         daoToken = _daoToken;
-        mintTokensToAddress.benefiary = _beneficiary;
+        mintTokensToAddress.beneficiary = _beneficiary;
         mintTokensToAddress.amount = _amount;
+        mintTokensToAddress.status = "proposed";
+        choice = new Choice(dao, daoToken, 1, address(this));
     }
 
-    function approveChoice(DAO _dao) public returns(bool) {
-        daoController.mintTokens(_dao, mintTokensToAddress.benefiary, mintTokensToAddress.amount);
-        emit MintTokensEvent(_dao, mintTokensToAddress.benefiary, mintTokensToAddress.amount);
+    function getChoiceAddress() public view returns(address) {
+        return choice.getAddress();
+    }
+
+    function getBeneficiary() public view returns(address, uint256, string memory) {
+        return(mintTokensToAddress.beneficiary, mintTokensToAddress.amount, mintTokensToAddress.status);
+    }
+
+    function approveChoice(DAO _dao, string memory _status) public returns(bool) {
+        mintTokensToAddress.status = _status;
+        // daoController.mintTokens(_dao, mintTokensToAddress.beneficiary, mintTokensToAddress.amount);
+        emit MintTokensEvent(_dao, mintTokensToAddress.beneficiary, mintTokensToAddress.amount);
         return true;
     }
 }

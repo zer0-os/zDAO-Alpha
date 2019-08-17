@@ -2,15 +2,13 @@ pragma solidity ^0.5.0;
 
 import "./ChoiceType.sol";
 import "./MintTokenChoice.sol";
-import "../controller/DAOController.sol";
 import "../controller/DAO.sol";
 
 contract Choice {
 
     DAO public dao;
     DAOToken public daoToken;
-    DAOController public daoController;
-    MintTokenChoice public mintTokenChoice;
+    ChoiceType public choiceType;
 
     //votingMachine - Absolute, Asolute Majority, Quarum
 
@@ -37,12 +35,17 @@ contract Choice {
     event voted(address indexed _voter, uint256 _vote);
     event choiceApproved(string _status);
 
-    constructor(DAO _dao, DAOToken _daoToken, uint256 _approvalThreshold) public { //MintTokenChoice _mintTokenChoice //votingMechanism
+    constructor(DAO _dao, DAOToken _daoToken, uint256 _approvalThreshold, address _choiceType)
+    public{
         dao = _dao;
         daoToken = _daoToken;
-        // mintTokenChoice = _mintTokenChoice;
+        choiceType = ChoiceType(_choiceType);
         choice.status = validStatus[0];
         choice.approvalThreshold = _approvalThreshold;
+    }
+
+    function getAddress() public view returns(address){
+        return address(this);
     }
 
     function vote(address _voter, uint256 _vote)
@@ -71,7 +74,7 @@ contract Choice {
         if(choice.voteCount==choice.approvalThreshold) {
             choice.status = "approved";
             emit choiceApproved(choice.status);
-            //mintTokenChoice.approveChoice(dao);
+            choiceType.approveChoice(dao, choice.status);
             return true;
         }
     }
