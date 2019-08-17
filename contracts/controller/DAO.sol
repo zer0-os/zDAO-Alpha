@@ -6,6 +6,7 @@ contract DAO is Ownable {
 
     bytes32 public daoName;
     DAOToken public daoToken;
+    mapping (address => DAOToken) daoTokens;
 
     event SendEther(address indexed _to, uint256 _amountInWei);
     event ExternalTokenTransfer(address indexed _externalToken, address indexed _to, uint256 _value);
@@ -21,6 +22,7 @@ contract DAO is Ownable {
     function() external payable {
         emit ReceiveEther(msg.sender, msg.value);
     }
+
     function sendEther(address payable _to, uint256 _amountInWei)
     public onlyOwner returns(bool) { //add back OnlyOwner
         _to.transfer(_amountInWei);
@@ -28,23 +30,25 @@ contract DAO is Ownable {
         return true;
     }
 
-    function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
+    function externalTokenTransfer(DAOToken _externalToken, address _to, uint256 _value)
     public onlyOwner returns(bool)
     {
+        daoToken = _externalToken;
         daoToken.transfer(_to, _value);
         emit ExternalTokenTransfer(address(_externalToken), _to, _value);
         return true;
     }
 
-    function externalTokenTransferFrom(IERC20 _externalToken, address _from, address _to, uint256 _value)
+    function externalTokenTransferFrom(DAOToken _externalToken, address _from, address _to, uint256 _value)
     public onlyOwner returns(bool)
     {
+        daoToken = _externalToken;
         daoToken.transferFrom(_from, _to, _value);
         emit ExternalTokenTransferFrom(address(_externalToken), _from, _to, _value);
         return true;
     }
 
-    function externalTokenApproval(IERC20 _externalToken, address _spender, uint256 _value)
+    function externalTokenApproval(DAOToken _externalToken, address _spender, uint256 _value)
     public onlyOwner returns(bool)
     {
         daoToken.approve(_spender, _value);

@@ -1,0 +1,984 @@
+{
+  "contractName": "ChoiceType",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "dao",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "daoToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "name": "_daoToken",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_dao",
+          "type": "address"
+        }
+      ],
+      "name": "approveChoice",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516040806103128339810180604052604081101561003057600080fd5b810190808051906020019092919080519060200190929190505050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050610235806100dd6000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634162169f1461005c5780634914b030146100b3578063e783d8e21461010a575b600080fd5b34801561006857600080fd5b50610071610173565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100bf57600080fd5b506100c8610198565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561011657600080fd5b506101596004803603602081101561012d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101be565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001905091905056fea165627a7a72305820fdf0106acbe5cb690e18b25c59f3bc29a8107e6c9c2a664e83cf84ee4b3638230029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680634162169f1461005c5780634914b030146100b3578063e783d8e21461010a575b600080fd5b34801561006857600080fd5b50610071610173565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100bf57600080fd5b506100c8610198565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561011657600080fd5b506101596004803603602081101561012d57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101be565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001905091905056fea165627a7a72305820fdf0106acbe5cb690e18b25c59f3bc29a8107e6c9c2a664e83cf84ee4b3638230029",
+  "sourceMap": "58:294:2:-;;;136:106;8:9:-1;5:2;;;30:1;27;20:12;5:2;136:106:2;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;136:106:2;;;;;;;;;;;;;;;;;;;;;;;;;201:4;195:3;;:10;;;;;;;;;;;;;;;;;;226:9;215:8;;:20;;;;;;;;;;;;;;;;;;136:106;;58:294;;;;;;",
+  "deployedSourceMap": "58:294:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;85:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;85:14:2;;;;;;;;;;;;;;;;;;;;;;;;;;;105:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;105:24:2;;;;;;;;;;;;;;;;;;;;;;;;;;;248:102;;8:9:-1;5:2;;;30:1;27;20:12;5:2;248:102:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;248:102:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;85:14;;;;;;;;;;;;;:::o;105:24::-;;;;;;;;;;;;;:::o;248:102::-;296:4;318;312:3;;:10;;;;;;;;;;;;;;;;;;339:4;332:11;;248:102;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../controller/DAO.sol\";\n\ncontract ChoiceType {\n\n    DAO public dao;\n    DAOToken public daoToken;\n\n    constructor(DAO _dao, DAOToken _daoToken) public {\n        dao = _dao;\n        daoToken = _daoToken;\n    }\n\n    function approveChoice(DAO _dao) public returns(bool) {\n        dao = _dao;\n        return true;\n    }\n}",
+  "sourcePath": "/Users/neo/Code/dz-0.01/contracts/choices/ChoiceType.sol",
+  "ast": {
+    "absolutePath": "/Users/neo/Code/dz-0.01/contracts/choices/ChoiceType.sol",
+    "exportedSymbols": {
+      "ChoiceType": [
+        284
+      ]
+    },
+    "id": 285,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 248,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAO.sol",
+        "file": "../controller/DAO.sol",
+        "id": 249,
+        "nodeType": "ImportDirective",
+        "scope": 285,
+        "sourceUnit": 579,
+        "src": "25:31:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 284,
+        "linearizedBaseContracts": [
+          284
+        ],
+        "name": "ChoiceType",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 251,
+            "name": "dao",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "85:14:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DAO_$578",
+              "typeString": "contract DAO"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 250,
+              "name": "DAO",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 578,
+              "src": "85:3:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DAO_$578",
+                "typeString": "contract DAO"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 253,
+            "name": "daoToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "105:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DAOToken_$1268",
+              "typeString": "contract DAOToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 252,
+              "name": "DAOToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1268,
+              "src": "105:8:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DAOToken_$1268",
+                "typeString": "contract DAOToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 268,
+              "nodeType": "Block",
+              "src": "185:57:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 262,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 260,
+                      "name": "dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 251,
+                      "src": "195:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 261,
+                      "name": "_dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 255,
+                      "src": "201:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "src": "195:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "id": 263,
+                  "nodeType": "ExpressionStatement",
+                  "src": "195:10:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 266,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 264,
+                      "name": "daoToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 253,
+                      "src": "215:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAOToken_$1268",
+                        "typeString": "contract DAOToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 265,
+                      "name": "_daoToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 257,
+                      "src": "226:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAOToken_$1268",
+                        "typeString": "contract DAOToken"
+                      }
+                    },
+                    "src": "215:20:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAOToken_$1268",
+                      "typeString": "contract DAOToken"
+                    }
+                  },
+                  "id": 267,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:20:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 269,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 255,
+                  "name": "_dao",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "148:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeString": "contract DAO"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 254,
+                    "name": "DAO",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 578,
+                    "src": "148:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "_daoToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "158:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAOToken_$1268",
+                    "typeString": "contract DAOToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 256,
+                    "name": "DAOToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1268,
+                    "src": "158:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAOToken_$1268",
+                      "typeString": "contract DAOToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:30:2"
+            },
+            "returnParameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "185:0:2"
+            },
+            "scope": 284,
+            "src": "136:106:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 282,
+              "nodeType": "Block",
+              "src": "302:48:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 278,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 276,
+                      "name": "dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 251,
+                      "src": "312:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 277,
+                      "name": "_dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 271,
+                      "src": "318:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "src": "312:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "id": 279,
+                  "nodeType": "ExpressionStatement",
+                  "src": "312:10:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "339:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 275,
+                  "id": 281,
+                  "nodeType": "Return",
+                  "src": "332:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 283,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveChoice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 271,
+                  "name": "_dao",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 283,
+                  "src": "271:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeString": "contract DAO"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 270,
+                    "name": "DAO",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 578,
+                    "src": "271:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:10:2"
+            },
+            "returnParameters": {
+              "id": 275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 274,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 283,
+                  "src": "296:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 273,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "295:6:2"
+            },
+            "scope": 284,
+            "src": "248:102:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 285,
+        "src": "58:294:2"
+      }
+    ],
+    "src": "0:352:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/neo/Code/dz-0.01/contracts/choices/ChoiceType.sol",
+    "exportedSymbols": {
+      "ChoiceType": [
+        284
+      ]
+    },
+    "id": 285,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 248,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAO.sol",
+        "file": "../controller/DAO.sol",
+        "id": 249,
+        "nodeType": "ImportDirective",
+        "scope": 285,
+        "sourceUnit": 579,
+        "src": "25:31:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 284,
+        "linearizedBaseContracts": [
+          284
+        ],
+        "name": "ChoiceType",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 251,
+            "name": "dao",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "85:14:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DAO_$578",
+              "typeString": "contract DAO"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 250,
+              "name": "DAO",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 578,
+              "src": "85:3:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DAO_$578",
+                "typeString": "contract DAO"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 253,
+            "name": "daoToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 284,
+            "src": "105:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DAOToken_$1268",
+              "typeString": "contract DAOToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 252,
+              "name": "DAOToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1268,
+              "src": "105:8:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DAOToken_$1268",
+                "typeString": "contract DAOToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 268,
+              "nodeType": "Block",
+              "src": "185:57:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 262,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 260,
+                      "name": "dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 251,
+                      "src": "195:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 261,
+                      "name": "_dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 255,
+                      "src": "201:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "src": "195:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "id": 263,
+                  "nodeType": "ExpressionStatement",
+                  "src": "195:10:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 266,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 264,
+                      "name": "daoToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 253,
+                      "src": "215:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAOToken_$1268",
+                        "typeString": "contract DAOToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 265,
+                      "name": "_daoToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 257,
+                      "src": "226:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAOToken_$1268",
+                        "typeString": "contract DAOToken"
+                      }
+                    },
+                    "src": "215:20:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAOToken_$1268",
+                      "typeString": "contract DAOToken"
+                    }
+                  },
+                  "id": 267,
+                  "nodeType": "ExpressionStatement",
+                  "src": "215:20:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 269,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 255,
+                  "name": "_dao",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "148:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeString": "contract DAO"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 254,
+                    "name": "DAO",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 578,
+                    "src": "148:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "_daoToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 269,
+                  "src": "158:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAOToken_$1268",
+                    "typeString": "contract DAOToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 256,
+                    "name": "DAOToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 1268,
+                    "src": "158:8:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAOToken_$1268",
+                      "typeString": "contract DAOToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:30:2"
+            },
+            "returnParameters": {
+              "id": 259,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "185:0:2"
+            },
+            "scope": 284,
+            "src": "136:106:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 282,
+              "nodeType": "Block",
+              "src": "302:48:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 278,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 276,
+                      "name": "dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 251,
+                      "src": "312:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 277,
+                      "name": "_dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 271,
+                      "src": "318:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DAO_$578",
+                        "typeString": "contract DAO"
+                      }
+                    },
+                    "src": "312:10:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "id": 279,
+                  "nodeType": "ExpressionStatement",
+                  "src": "312:10:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 280,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "339:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 275,
+                  "id": 281,
+                  "nodeType": "Return",
+                  "src": "332:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 283,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approveChoice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 272,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 271,
+                  "name": "_dao",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 283,
+                  "src": "271:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeString": "contract DAO"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 270,
+                    "name": "DAO",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 578,
+                    "src": "271:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeString": "contract DAO"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:10:2"
+            },
+            "returnParameters": {
+              "id": 275,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 274,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 283,
+                  "src": "296:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 273,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "295:6:2"
+            },
+            "scope": 284,
+            "src": "248:102:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 285,
+        "src": "58:294:2"
+      }
+    ],
+    "src": "0:352:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.0",
+  "updatedAt": "2019-08-17T02:06:30.311Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

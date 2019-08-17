@@ -1,11 +1,11 @@
 pragma solidity ^0.5.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol";
-import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
-import "@openzeppelin/contracts/ownership/Ownable.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol";
+import "../../node_modules/@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
+import "../../node_modules/@openzeppelin/contracts/ownership/Ownable.sol";
 
 contract DAOToken is ERC20, Ownable  {
 
@@ -17,7 +17,6 @@ contract DAOToken is ERC20, Ownable  {
     uint8 public constant decimals = 18;
     uint256 public cap;
     bool isTransferable;
-
     uint256 public transactions;
 
     event received(string msg);

@@ -8,7 +8,8 @@ contract DAOController {
     struct Neuron {
         string neuronName;
         address neuronAddress;
-        uint listPointer;
+        DAOToken neuronToken;
+        uint listIndex;
         bytes4 permissions;
     }
 
@@ -41,7 +42,7 @@ contract DAOController {
     }
 
     function getNeuron(address _neuronAddress) public view returns (string memory, uint, bytes4) {
-        return(neurons[_neuronAddress].neuronName, neurons[_neuronAddress].listPointer, neurons[_neuronAddress].permissions);
+        return(neurons[_neuronAddress].neuronName, neurons[_neuronAddress].listIndex, neurons[_neuronAddress].permissions);
     }
 
     function activateNeuron (address _neuronAddress, string calldata _neuronName, bytes4 _permissions)
@@ -52,7 +53,7 @@ contract DAOController {
         neurons[_neuronAddress].neuronName = _neuronName;
         neurons[_neuronAddress].permissions = _permissions;
         neuronList.push(_neuronAddress);
-        neurons[_neuronAddress].listPointer = neuronList.length-1;
+        neurons[_neuronAddress].listIndex = neuronList.length-1;
         emit ActivateNeuron (msg.sender, _neuronAddress);
         return true;
     }
@@ -61,17 +62,17 @@ contract DAOController {
     external
     PermissionToDeactivateNeuron()
     returns(bool) {
-        uint rowToDelete = neurons[_neuronAddress].listPointer;
+        uint rowToDelete = neurons[_neuronAddress].listIndex;
         address rowToMove = neuronList[neuronList.length-1];
         neuronList[rowToDelete] = rowToMove;
-        neurons[rowToMove].listPointer = rowToDelete;
+        neurons[rowToMove].listIndex = rowToDelete;
         neuronList.length--;
         delete neurons[_neuronAddress];
         emit DeactivateNeuron(msg.sender, _neuronAddress);
         return true;
     }
 
-    function mintTokens(address _dao, address _beneficiary, uint256 _amount)
+    function mintTokens(DAO _dao, address _beneficiary, uint256 _amount)
     external
     PermissionToMintToken()
     returns(bool)
@@ -98,7 +99,7 @@ contract DAOController {
         return daoToken.BurnFrom(_account, _amount);
     }
 
-    function externalTokenTransfer(IERC20 _externalToken, address _to, uint256 _value)
+    function externalTokenTransfer(DAOToken _externalToken, address _to, uint256 _value)
     external
     PermissionToBurnToken()
     returns(bool)
@@ -106,7 +107,7 @@ contract DAOController {
         return dao.externalTokenTransfer(_externalToken, _to, _value);
     }
 
-    function externalTokenTransferFrom(IERC20 _externalToken, address _from, address _to, uint256 _value)
+    function externalTokenTransferFrom(DAOToken _externalToken, address _from, address _to, uint256 _value)
     external
     PermissionToTransferTokenFrom()
     returns(bool)
@@ -114,7 +115,7 @@ contract DAOController {
         return dao.externalTokenTransferFrom(_externalToken, _from, _to, _value);
     }
 
-    function externalTokenApproval(IERC20 _externalToken, address _spender, uint256 _value)
+    function externalTokenApproval(DAOToken _externalToken, address _spender, uint256 _value)
     external
     PermissionToApproveToken()
     returns(bool)

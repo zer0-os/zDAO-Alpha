@@ -37,7 +37,7 @@ module.exports = function(deployer) {
     dc.activateNeuron(dc.address, "DAOController", "0x00000010");
     dc.activateNeuron(tmDeployed.address, "TokenMinter", "0x00000010");
 
-    tmDeployed.MintTokens("0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 1337);
+    // tmDeployed.MintTokens(da, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 1337);
   });
 };
 

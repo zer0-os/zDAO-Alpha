@@ -36,7 +36,7 @@ contract SpawnDAO {
         uint256 _cap
     ) private returns(address)
     {
-        // Create Token and associated DAO:
+        // Create Token and DAO:
         DAOToken daoToken = new DAOToken(_tokenName, _tokenSymbol, _cap, false);
         DAO dao = new DAO(_daoName, daoToken);
 
@@ -45,7 +45,7 @@ contract SpawnDAO {
         // Create Controller:
         daoController = spawnController.create(dao);
 
-        // Transfer ownership:
+        // Transfer Ownership:
         daoToken.transferOwnership(address(daoController));
         dao.transferOwnership(address(daoController));
 
