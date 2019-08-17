@@ -24,9 +24,10 @@ contract MintTokenChoice is ChoiceType {
 
     MintTokensToAddress mintTokensToAddress;
 
-    constructor(DAO _dao, DAOToken _daoToken, address _beneficiary, uint256 _amount) public {
+    constructor(DAO _dao, DAOToken _daoToken, DAOController _daoController, address _beneficiary, uint256 _amount) public {
         dao = _dao;
         daoToken = _daoToken;
+        daoController = _daoController;
         mintTokensToAddress.beneficiary = _beneficiary;
         mintTokensToAddress.amount = _amount;
         mintTokensToAddress.status = "proposed";
@@ -43,7 +44,7 @@ contract MintTokenChoice is ChoiceType {
 
     function approveChoice(DAO _dao, string memory _status) public returns(bool) {
         mintTokensToAddress.status = _status;
-        // daoController.mintTokens(_dao, mintTokensToAddress.beneficiary, mintTokensToAddress.amount);
+        daoController.mintTokens(_dao, mintTokensToAddress.beneficiary, mintTokensToAddress.amount);
         emit MintTokensEvent(_dao, mintTokensToAddress.beneficiary, mintTokensToAddress.amount);
         return true;
     }

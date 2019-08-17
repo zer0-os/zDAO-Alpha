@@ -49,7 +49,7 @@ module.exports = function(deployer) {
     // let DAOTokenInstance = await DAOToken.at(daoToken);
     // let DAOInstance = await DAO.at(dao);
 
-    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dao, daoToken, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
+    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dao, daoToken, dc.address, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
     // let choiceInstance = await deployer.deploy(Choice, dao, daoToken, 1, mintTokenChoice.address);
 
     //Console.log
@@ -63,38 +63,3 @@ module.exports = function(deployer) {
 
   });
 };
-
-  // deployer.deploy(DAOToken, "Infinity", "INI", 1000000, false).then(async function() {
-  //   var DAOTokeni = DAOToken.deployed(DAOToken.address);
-  //   await deployer.deploy(DAO, "DAOZero", DAO.address);
-  //   await deployer.deploy(DAOController, DAO.address);
-  // });
-
-// 1. Controller Creator 
-// 2. DAO Creator: ForgeOrg
-// 3. DAO -> DAOToken: (Avatar)
-// 4. Voting Machines
-// 5. Global Constraints 
-// 6. Schemes 
-// 7. Set Schemes
-// 8. UController
-
-
-// deployer.deploy(ControllerCreator, {gas: constants.ARC_GAS_LIMIT}).then(async function(){
-//   var controllerCreator = await ControllerCreator.deployed();
-
-//   await deployer.deploy(DaoCreator,controllerCreator.address, {gas: constants.ARC_GAS_LIMIT});
-//   var daoCreatorInst = await DaoCreator.deployed(controllerCreator.address,{gas: constants.ARC_GAS_LIMIT});
-//   // Create DAOstack:
-
-// Get founders accounts
-//   await web3.eth.getAccounts(function(err,res) { accounts = res; });
-//   founders[0] = accounts[0];
-
-//   var returnedParams = await daoCreatorInst.forgeOrg(orgName, tokenName, tokenSymbol, founders,
-//       initTokenInWei, initRepInWei,NULL_ADDRESS,cap,{gas: constants.ARC_GAS_LIMIT});
-//   var AvatarInst = await Avatar.at(returnedParams.logs[0].args._avatar);
-
-//   await deployer.deploy(AbsoluteVote,{gas: constants.ARC_GAS_LIMIT});
-//   // Deploy AbsoluteVote:
-//   var AbsoluteVoteInst = await AbsoluteVote.deployed();

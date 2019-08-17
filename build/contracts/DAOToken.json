@@ -4079,7 +4079,7 @@
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2019-08-17T19:43:16.170Z",
+  "updatedAt": "2019-08-17T19:53:40.267Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

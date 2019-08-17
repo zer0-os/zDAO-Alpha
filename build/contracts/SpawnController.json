@@ -660,12 +660,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x66D599C87d6047c45FF1ab9279d88a3F0c83E58a",
-      "transactionHash": "0x4367b7e383c09df2cf9479933ba34c2e0e7f041c6bc441f64e311f02a59df94b"
+      "address": "0xecEC739eE1fA328F7734228e04Fc42dFfFd9bCa7",
+      "transactionHash": "0x8b8a406d35150d4bef8251d0a8ee4b18585b4a4fcbb0717f28dafec548ccbac0"
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2019-08-17T19:43:16.159Z",
+  "updatedAt": "2019-08-17T19:53:40.254Z",
   "devdoc": {
     "methods": {}
   },
