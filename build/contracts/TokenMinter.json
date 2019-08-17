@@ -95,8 +95,8 @@
       "signature": "0x21f9c9a1"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806104878339810180604052602081101561003057600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506103f5806100926000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806321f9c9a11461005c5780634162169f146100ef578063d48de62214610146575b600080fd5b34801561006857600080fd5b506100d56004803603606081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061019d565b604051808215151515815260200191505060405180910390f35b3480156100fb57600080fd5b5061010461037e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015257600080fd5b5061015b6103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636fc98ee18585856040518463ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561029857600080fd5b505af11580156102ac573d6000803e3d6000fd5b505050506040513d60208110156102c257600080fd5b8101908080519060200190929190505050507f4e6baac910c29b169b30dab9f8ea29204b2d7dbb1a21147afd3bbb44135d195c848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a1600190509392505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058201bc699b969ea039508cdb3afab68604ecd245e18148b65e7372196306e152a110029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806321f9c9a11461005c5780634162169f146100ef578063d48de62214610146575b600080fd5b34801561006857600080fd5b506100d56004803603606081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061019d565b604051808215151515815260200191505060405180910390f35b3480156100fb57600080fd5b5061010461037e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015257600080fd5b5061015b6103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636fc98ee18585856040518463ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561029857600080fd5b505af11580156102ac573d6000803e3d6000fd5b505050506040513d60208110156102c257600080fd5b8101908080519060200190929190505050507f4e6baac910c29b169b30dab9f8ea29204b2d7dbb1a21147afd3bbb44135d195c848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a1600190509392505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058201bc699b969ea039508cdb3afab68604ecd245e18148b65e7372196306e152a110029",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806104878339810180604052602081101561003057600080fd5b810190808051906020019092919050505080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506103f5806100926000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806321f9c9a11461005c5780634162169f146100ef578063d48de62214610146575b600080fd5b34801561006857600080fd5b506100d56004803603606081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061019d565b604051808215151515815260200191505060405180910390f35b3480156100fb57600080fd5b5061010461037e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015257600080fd5b5061015b6103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636fc98ee18585856040518463ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561029857600080fd5b505af11580156102ac573d6000803e3d6000fd5b505050506040513d60208110156102c257600080fd5b8101908080519060200190929190505050507f4e6baac910c29b169b30dab9f8ea29204b2d7dbb1a21147afd3bbb44135d195c848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a1600190509392505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058203bf8c323c548583d8842e456fd7875d585f57f1fec518611adba9ce271b30bbe0029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806321f9c9a11461005c5780634162169f146100ef578063d48de62214610146575b600080fd5b34801561006857600080fd5b506100d56004803603606081101561007f57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061019d565b604051808215151515815260200191505060405180910390f35b3480156100fb57600080fd5b5061010461037e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015257600080fd5b5061015b6103a3565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16636fc98ee18585856040518463ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019350505050602060405180830381600087803b15801561029857600080fd5b505af11580156102ac573d6000803e3d6000fd5b505050506040513d60208110156102c257600080fd5b8101908080519060200190929190505050507f4e6baac910c29b169b30dab9f8ea29204b2d7dbb1a21147afd3bbb44135d195c848484604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001828152602001935050505060405180910390a1600190509392505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058203bf8c323c548583d8842e456fd7875d585f57f1fec518611adba9ce271b30bbe0029",
   "sourceMap": "100:510:7:-;;;189:96;8:9:-1;5:2;;;30:1;27;20:12;5:2;189:96:7;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;189:96:7;;;;;;;;;;;;;;;;264:14;248:13;;:30;;;;;;;;;;;;;;;;;;189:96;100:510;;;;;;",
   "deployedSourceMap": "100:510:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;368:240;;8:9:-1;5:2;;;30:1;27;20:12;5:2;368:240:7;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;368:240:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;128:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;128:14:7;;;;;;;;;;;;;;;;;;;;;;;;;;;148:34;;8:9:-1;5:2;;;30:1;27;20:12;5:2;148:34:7;;;;;;;;;;;;;;;;;;;;;;;;;;;368:240;452:4;468:13;;;;;;;;;;;:24;;;493:4;499:12;513:7;468:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;468:53:7;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;468:53:7;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;468:53:7;;;;;;;;;;;;;;;;;536:44;552:4;558:12;572:7;536:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;597:4;590:11;;368:240;;;;;:::o;128:14::-;;;;;;;;;;;;;:::o;148:34::-;;;;;;;;;;;;;:::o",
   "source": "pragma solidity ^0.5.0;\n\nimport \"../controller/DAO.sol\";\nimport \"../controller/DAOController.sol\";\n\ncontract TokenMinter {\n\n    DAO public dao;\n    DAOController public daoController;\n\n    constructor(DAOController _daoController) public {\n        daoController = _daoController;\n    }\n\n    event MintTokensEvent(DAO _dao, address _beneficiary, uint256 _amount);\n\n    function MintTokens(DAO _dao, address _beneficiary, uint256 _amount) public returns(bool) {\n        daoController.mintTokens(_dao, _beneficiary, _amount);\n        emit MintTokensEvent(_dao, _beneficiary, _amount);\n        return true;\n    }\n}",
@@ -105,14 +105,14 @@
     "absolutePath": "/Users/neo/Code/dz-0.01/contracts/neurons/TokenMinter.sol",
     "exportedSymbols": {
       "TokenMinter": [
-        1323
+        1350
       ]
     },
-    "id": 1324,
+    "id": 1351,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1270,
+        "id": 1297,
         "literals": [
           "solidity",
           "^",
@@ -125,10 +125,10 @@
       {
         "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAO.sol",
         "file": "../controller/DAO.sol",
-        "id": 1271,
+        "id": 1298,
         "nodeType": "ImportDirective",
-        "scope": 1324,
-        "sourceUnit": 579,
+        "scope": 1351,
+        "sourceUnit": 608,
         "src": "25:31:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -136,10 +136,10 @@
       {
         "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAOController.sol",
         "file": "../controller/DAOController.sol",
-        "id": 1272,
+        "id": 1299,
         "nodeType": "ImportDirective",
-        "scope": 1324,
-        "sourceUnit": 1123,
+        "scope": 1351,
+        "sourceUnit": 1150,
         "src": "57:41:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -150,35 +150,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1323,
+        "id": 1350,
         "linearizedBaseContracts": [
-          1323
+          1350
         ],
         "name": "TokenMinter",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1274,
+            "id": 1301,
             "name": "dao",
             "nodeType": "VariableDeclaration",
-            "scope": 1323,
+            "scope": 1350,
             "src": "128:14:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_DAO_$578",
+              "typeIdentifier": "t_contract$_DAO_$607",
               "typeString": "contract DAO"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1273,
+              "id": 1300,
               "name": "DAO",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 578,
+              "referencedDeclaration": 607,
               "src": "128:3:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAO_$578",
+                "typeIdentifier": "t_contract$_DAO_$607",
                 "typeString": "contract DAO"
               }
             },
@@ -187,26 +187,26 @@
           },
           {
             "constant": false,
-            "id": 1276,
+            "id": 1303,
             "name": "daoController",
             "nodeType": "VariableDeclaration",
-            "scope": 1323,
+            "scope": 1350,
             "src": "148:34:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_DAOController_$1122",
+              "typeIdentifier": "t_contract$_DAOController_$1149",
               "typeString": "contract DAOController"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1275,
+              "id": 1302,
               "name": "DAOController",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1122,
+              "referencedDeclaration": 1149,
               "src": "148:13:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAOController_$1122",
+                "typeIdentifier": "t_contract$_DAOController_$1149",
                 "typeString": "contract DAOController"
               }
             },
@@ -215,28 +215,28 @@
           },
           {
             "body": {
-              "id": 1285,
+              "id": 1312,
               "nodeType": "Block",
               "src": "238:47:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1283,
+                    "id": 1310,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1281,
+                      "id": 1308,
                       "name": "daoController",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1276,
+                      "referencedDeclaration": 1303,
                       "src": "248:13:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DAOController_$1122",
+                        "typeIdentifier": "t_contract$_DAOController_$1149",
                         "typeString": "contract DAOController"
                       }
                     },
@@ -244,62 +244,62 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1282,
+                      "id": 1309,
                       "name": "_daoController",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1278,
+                      "referencedDeclaration": 1305,
                       "src": "264:14:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DAOController_$1122",
+                        "typeIdentifier": "t_contract$_DAOController_$1149",
                         "typeString": "contract DAOController"
                       }
                     },
                     "src": "248:30:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAOController_$1122",
+                      "typeIdentifier": "t_contract$_DAOController_$1149",
                       "typeString": "contract DAOController"
                     }
                   },
-                  "id": 1284,
+                  "id": 1311,
                   "nodeType": "ExpressionStatement",
                   "src": "248:30:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1286,
+            "id": 1313,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1279,
+              "id": 1306,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1278,
+                  "id": 1305,
                   "name": "_daoController",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1286,
+                  "scope": 1313,
                   "src": "201:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAOController_$1122",
+                    "typeIdentifier": "t_contract$_DAOController_$1149",
                     "typeString": "contract DAOController"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1277,
+                    "id": 1304,
                     "name": "DAOController",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1122,
+                    "referencedDeclaration": 1149,
                     "src": "201:13:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAOController_$1122",
+                      "typeIdentifier": "t_contract$_DAOController_$1149",
                       "typeString": "contract DAOController"
                     }
                   },
@@ -310,12 +310,12 @@
               "src": "200:30:7"
             },
             "returnParameters": {
-              "id": 1280,
+              "id": 1307,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "238:0:7"
             },
-            "scope": 1323,
+            "scope": 1350,
             "src": "189:96:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -324,36 +324,36 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1294,
+            "id": 1321,
             "name": "MintTokensEvent",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1293,
+              "id": 1320,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1288,
+                  "id": 1315,
                   "indexed": false,
                   "name": "_dao",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "313:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeIdentifier": "t_contract$_DAO_$607",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1287,
+                    "id": 1314,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 578,
+                    "referencedDeclaration": 607,
                     "src": "313:3:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeIdentifier": "t_contract$_DAO_$607",
                       "typeString": "contract DAO"
                     }
                   },
@@ -362,11 +362,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1290,
+                  "id": 1317,
                   "indexed": false,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "323:20:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -375,7 +375,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1289,
+                    "id": 1316,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "323:7:7",
@@ -390,11 +390,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1292,
+                  "id": 1319,
                   "indexed": false,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "345:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -403,7 +403,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1291,
+                    "id": 1318,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "345:7:7",
@@ -422,7 +422,7 @@
           },
           {
             "body": {
-              "id": 1321,
+              "id": 1348,
               "nodeType": "Block",
               "src": "458:150:7",
               "statements": [
@@ -432,24 +432,24 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1308,
+                        "id": 1335,
                         "name": "_dao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1296,
+                        "referencedDeclaration": 1323,
                         "src": "493:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1309,
+                        "id": 1336,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1298,
+                        "referencedDeclaration": 1325,
                         "src": "499:12:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -458,11 +458,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1310,
+                        "id": 1337,
                         "name": "_amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1300,
+                        "referencedDeclaration": 1327,
                         "src": "513:7:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -473,7 +473,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         },
                         {
@@ -487,32 +487,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1305,
+                        "id": 1332,
                         "name": "daoController",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1276,
+                        "referencedDeclaration": 1303,
                         "src": "468:13:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAOController_$1122",
+                          "typeIdentifier": "t_contract$_DAOController_$1149",
                           "typeString": "contract DAOController"
                         }
                       },
-                      "id": 1307,
+                      "id": 1334,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "mintTokens",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 842,
+                      "referencedDeclaration": 869,
                       "src": "468:24:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_DAO_$578_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_DAO_$607_$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (contract DAO,address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 1311,
+                    "id": 1338,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -526,7 +526,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1312,
+                  "id": 1339,
                   "nodeType": "ExpressionStatement",
                   "src": "468:53:7"
                 },
@@ -536,24 +536,24 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1314,
+                        "id": 1341,
                         "name": "_dao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1296,
+                        "referencedDeclaration": 1323,
                         "src": "552:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1315,
+                        "id": 1342,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1298,
+                        "referencedDeclaration": 1325,
                         "src": "558:12:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -562,11 +562,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1316,
+                        "id": 1343,
                         "name": "_amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1300,
+                        "referencedDeclaration": 1327,
                         "src": "572:7:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -577,7 +577,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         },
                         {
@@ -589,18 +589,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1313,
+                      "id": 1340,
                       "name": "MintTokensEvent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1294,
+                      "referencedDeclaration": 1321,
                       "src": "536:15:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_DAO_$578_$_t_address_$_t_uint256_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_DAO_$607_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (contract DAO,address,uint256)"
                       }
                     },
-                    "id": 1317,
+                    "id": 1344,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -614,7 +614,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1318,
+                  "id": 1345,
                   "nodeType": "EmitStatement",
                   "src": "531:49:7"
                 },
@@ -622,7 +622,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 1319,
+                    "id": 1346,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -637,46 +637,46 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 1304,
-                  "id": 1320,
+                  "functionReturnParameters": 1331,
+                  "id": 1347,
                   "nodeType": "Return",
                   "src": "590:11:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1322,
+            "id": 1349,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "MintTokens",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1301,
+              "id": 1328,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1296,
+                  "id": 1323,
                   "name": "_dao",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "388:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeIdentifier": "t_contract$_DAO_$607",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1295,
+                    "id": 1322,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 578,
+                    "referencedDeclaration": 607,
                     "src": "388:3:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeIdentifier": "t_contract$_DAO_$607",
                       "typeString": "contract DAO"
                     }
                   },
@@ -685,10 +685,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1298,
+                  "id": 1325,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "398:20:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -697,7 +697,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1297,
+                    "id": 1324,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "398:7:7",
@@ -712,10 +712,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1300,
+                  "id": 1327,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "420:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -724,7 +724,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1299,
+                    "id": 1326,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "420:7:7",
@@ -740,15 +740,15 @@
               "src": "387:49:7"
             },
             "returnParameters": {
-              "id": 1304,
+              "id": 1331,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1303,
+                  "id": 1330,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "452:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -757,7 +757,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1302,
+                    "id": 1329,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "452:4:7",
@@ -772,14 +772,14 @@
               ],
               "src": "451:6:7"
             },
-            "scope": 1323,
+            "scope": 1350,
             "src": "368:240:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1324,
+        "scope": 1351,
         "src": "100:510:7"
       }
     ],
@@ -789,14 +789,14 @@
     "absolutePath": "/Users/neo/Code/dz-0.01/contracts/neurons/TokenMinter.sol",
     "exportedSymbols": {
       "TokenMinter": [
-        1323
+        1350
       ]
     },
-    "id": 1324,
+    "id": 1351,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1270,
+        "id": 1297,
         "literals": [
           "solidity",
           "^",
@@ -809,10 +809,10 @@
       {
         "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAO.sol",
         "file": "../controller/DAO.sol",
-        "id": 1271,
+        "id": 1298,
         "nodeType": "ImportDirective",
-        "scope": 1324,
-        "sourceUnit": 579,
+        "scope": 1351,
+        "sourceUnit": 608,
         "src": "25:31:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -820,10 +820,10 @@
       {
         "absolutePath": "/Users/neo/Code/dz-0.01/contracts/controller/DAOController.sol",
         "file": "../controller/DAOController.sol",
-        "id": 1272,
+        "id": 1299,
         "nodeType": "ImportDirective",
-        "scope": 1324,
-        "sourceUnit": 1123,
+        "scope": 1351,
+        "sourceUnit": 1150,
         "src": "57:41:7",
         "symbolAliases": [],
         "unitAlias": ""
@@ -834,35 +834,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1323,
+        "id": 1350,
         "linearizedBaseContracts": [
-          1323
+          1350
         ],
         "name": "TokenMinter",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 1274,
+            "id": 1301,
             "name": "dao",
             "nodeType": "VariableDeclaration",
-            "scope": 1323,
+            "scope": 1350,
             "src": "128:14:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_DAO_$578",
+              "typeIdentifier": "t_contract$_DAO_$607",
               "typeString": "contract DAO"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1273,
+              "id": 1300,
               "name": "DAO",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 578,
+              "referencedDeclaration": 607,
               "src": "128:3:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAO_$578",
+                "typeIdentifier": "t_contract$_DAO_$607",
                 "typeString": "contract DAO"
               }
             },
@@ -871,26 +871,26 @@
           },
           {
             "constant": false,
-            "id": 1276,
+            "id": 1303,
             "name": "daoController",
             "nodeType": "VariableDeclaration",
-            "scope": 1323,
+            "scope": 1350,
             "src": "148:34:7",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_DAOController_$1122",
+              "typeIdentifier": "t_contract$_DAOController_$1149",
               "typeString": "contract DAOController"
             },
             "typeName": {
               "contractScope": null,
-              "id": 1275,
+              "id": 1302,
               "name": "DAOController",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1122,
+              "referencedDeclaration": 1149,
               "src": "148:13:7",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAOController_$1122",
+                "typeIdentifier": "t_contract$_DAOController_$1149",
                 "typeString": "contract DAOController"
               }
             },
@@ -899,28 +899,28 @@
           },
           {
             "body": {
-              "id": 1285,
+              "id": 1312,
               "nodeType": "Block",
               "src": "238:47:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1283,
+                    "id": 1310,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1281,
+                      "id": 1308,
                       "name": "daoController",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1276,
+                      "referencedDeclaration": 1303,
                       "src": "248:13:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DAOController_$1122",
+                        "typeIdentifier": "t_contract$_DAOController_$1149",
                         "typeString": "contract DAOController"
                       }
                     },
@@ -928,62 +928,62 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1282,
+                      "id": 1309,
                       "name": "_daoController",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1278,
+                      "referencedDeclaration": 1305,
                       "src": "264:14:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_DAOController_$1122",
+                        "typeIdentifier": "t_contract$_DAOController_$1149",
                         "typeString": "contract DAOController"
                       }
                     },
                     "src": "248:30:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAOController_$1122",
+                      "typeIdentifier": "t_contract$_DAOController_$1149",
                       "typeString": "contract DAOController"
                     }
                   },
-                  "id": 1284,
+                  "id": 1311,
                   "nodeType": "ExpressionStatement",
                   "src": "248:30:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1286,
+            "id": 1313,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1279,
+              "id": 1306,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1278,
+                  "id": 1305,
                   "name": "_daoController",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1286,
+                  "scope": 1313,
                   "src": "201:28:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAOController_$1122",
+                    "typeIdentifier": "t_contract$_DAOController_$1149",
                     "typeString": "contract DAOController"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1277,
+                    "id": 1304,
                     "name": "DAOController",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 1122,
+                    "referencedDeclaration": 1149,
                     "src": "201:13:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAOController_$1122",
+                      "typeIdentifier": "t_contract$_DAOController_$1149",
                       "typeString": "contract DAOController"
                     }
                   },
@@ -994,12 +994,12 @@
               "src": "200:30:7"
             },
             "returnParameters": {
-              "id": 1280,
+              "id": 1307,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "238:0:7"
             },
-            "scope": 1323,
+            "scope": 1350,
             "src": "189:96:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1008,36 +1008,36 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1294,
+            "id": 1321,
             "name": "MintTokensEvent",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1293,
+              "id": 1320,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1288,
+                  "id": 1315,
                   "indexed": false,
                   "name": "_dao",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "313:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeIdentifier": "t_contract$_DAO_$607",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1287,
+                    "id": 1314,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 578,
+                    "referencedDeclaration": 607,
                     "src": "313:3:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeIdentifier": "t_contract$_DAO_$607",
                       "typeString": "contract DAO"
                     }
                   },
@@ -1046,11 +1046,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1290,
+                  "id": 1317,
                   "indexed": false,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "323:20:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1059,7 +1059,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1289,
+                    "id": 1316,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "323:7:7",
@@ -1074,11 +1074,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1292,
+                  "id": 1319,
                   "indexed": false,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1294,
+                  "scope": 1321,
                   "src": "345:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1087,7 +1087,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1291,
+                    "id": 1318,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "345:7:7",
@@ -1106,7 +1106,7 @@
           },
           {
             "body": {
-              "id": 1321,
+              "id": 1348,
               "nodeType": "Block",
               "src": "458:150:7",
               "statements": [
@@ -1116,24 +1116,24 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1308,
+                        "id": 1335,
                         "name": "_dao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1296,
+                        "referencedDeclaration": 1323,
                         "src": "493:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1309,
+                        "id": 1336,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1298,
+                        "referencedDeclaration": 1325,
                         "src": "499:12:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1142,11 +1142,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1310,
+                        "id": 1337,
                         "name": "_amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1300,
+                        "referencedDeclaration": 1327,
                         "src": "513:7:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1157,7 +1157,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         },
                         {
@@ -1171,32 +1171,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1305,
+                        "id": 1332,
                         "name": "daoController",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1276,
+                        "referencedDeclaration": 1303,
                         "src": "468:13:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAOController_$1122",
+                          "typeIdentifier": "t_contract$_DAOController_$1149",
                           "typeString": "contract DAOController"
                         }
                       },
-                      "id": 1307,
+                      "id": 1334,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "mintTokens",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 842,
+                      "referencedDeclaration": 869,
                       "src": "468:24:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_DAO_$578_$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeIdentifier": "t_function_external_nonpayable$_t_contract$_DAO_$607_$_t_address_$_t_uint256_$returns$_t_bool_$",
                         "typeString": "function (contract DAO,address,uint256) external returns (bool)"
                       }
                     },
-                    "id": 1311,
+                    "id": 1338,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1210,7 +1210,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1312,
+                  "id": 1339,
                   "nodeType": "ExpressionStatement",
                   "src": "468:53:7"
                 },
@@ -1220,24 +1220,24 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1314,
+                        "id": 1341,
                         "name": "_dao",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1296,
+                        "referencedDeclaration": 1323,
                         "src": "552:4:7",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         }
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1315,
+                        "id": 1342,
                         "name": "_beneficiary",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1298,
+                        "referencedDeclaration": 1325,
                         "src": "558:12:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1246,11 +1246,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1316,
+                        "id": 1343,
                         "name": "_amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1300,
+                        "referencedDeclaration": 1327,
                         "src": "572:7:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1261,7 +1261,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_DAO_$578",
+                          "typeIdentifier": "t_contract$_DAO_$607",
                           "typeString": "contract DAO"
                         },
                         {
@@ -1273,18 +1273,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1313,
+                      "id": 1340,
                       "name": "MintTokensEvent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1294,
+                      "referencedDeclaration": 1321,
                       "src": "536:15:7",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_DAO_$578_$_t_address_$_t_uint256_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_contract$_DAO_$607_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (contract DAO,address,uint256)"
                       }
                     },
-                    "id": 1317,
+                    "id": 1344,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1298,7 +1298,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1318,
+                  "id": 1345,
                   "nodeType": "EmitStatement",
                   "src": "531:49:7"
                 },
@@ -1306,7 +1306,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 1319,
+                    "id": 1346,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1321,46 +1321,46 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 1304,
-                  "id": 1320,
+                  "functionReturnParameters": 1331,
+                  "id": 1347,
                   "nodeType": "Return",
                   "src": "590:11:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1322,
+            "id": 1349,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "MintTokens",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1301,
+              "id": 1328,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1296,
+                  "id": 1323,
                   "name": "_dao",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "388:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$578",
+                    "typeIdentifier": "t_contract$_DAO_$607",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 1295,
+                    "id": 1322,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 578,
+                    "referencedDeclaration": 607,
                     "src": "388:3:7",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$578",
+                      "typeIdentifier": "t_contract$_DAO_$607",
                       "typeString": "contract DAO"
                     }
                   },
@@ -1369,10 +1369,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1298,
+                  "id": 1325,
                   "name": "_beneficiary",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "398:20:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1381,7 +1381,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1297,
+                    "id": 1324,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "398:7:7",
@@ -1396,10 +1396,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1300,
+                  "id": 1327,
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "420:15:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1408,7 +1408,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1299,
+                    "id": 1326,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "420:7:7",
@@ -1424,15 +1424,15 @@
               "src": "387:49:7"
             },
             "returnParameters": {
-              "id": 1304,
+              "id": 1331,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1303,
+                  "id": 1330,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1322,
+                  "scope": 1349,
                   "src": "452:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1441,7 +1441,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1302,
+                    "id": 1329,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "452:4:7",
@@ -1456,14 +1456,14 @@
               ],
               "src": "451:6:7"
             },
-            "scope": 1323,
+            "scope": 1350,
             "src": "368:240:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1324,
+        "scope": 1351,
         "src": "100:510:7"
       }
     ],
@@ -1477,12 +1477,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xf631176304b6FF4d9EF6E4978C9D3893b9eD70B3",
-      "transactionHash": "0x10adc804a9a84be09aceedccc53d675abe5a172e5462f3d2439864c08ed123d7"
+      "address": "0xB7a97929f848680244F367bc5a0b302Db66D6900",
+      "transactionHash": "0x5274aa94b21e5cc86c5866ca4c3170917a6cc6dbaba129cdb0af50799fa51856"
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2019-08-17T02:21:31.025Z",
+  "updatedAt": "2019-08-17T05:09:05.635Z",
   "devdoc": {
     "methods": {}
   },

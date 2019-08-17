@@ -6,14 +6,14 @@ import "../controller/DAO.sol";
 import "../controller/DAOController.sol";
 
 
-contract MintTokenChoice { 
+contract MintTokenChoice {
 
     DAO dao;
     DAOToken daoToken;
     DAOController daoController;
-    MintTokenChoice mtc;
+    // MintTokenChoice mtc;
     
-    Choice choice = new Choice(dao, daoToken, mtc);
+    Choice choice = new Choice(dao, daoToken, 2); //mtc
 
     event MintTokensEvent(DAO _dao, address _beneficiary, uint256 _amount);
 

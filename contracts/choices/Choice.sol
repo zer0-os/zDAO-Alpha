@@ -19,7 +19,7 @@ contract Choice {
         string url;
         string status;
         uint256 voteCount;
-        uint256 approvalPercetage;
+        uint256 approvalThreshold;
         uint256 expiry;
     }
 
@@ -30,17 +30,19 @@ contract Choice {
     }
 
     ChoiceData choice;
-    string[3] validStatus = ["Proposed", "Approved", "Rejected"];
+    string[3] validStatus = ["proposed", "approved", "rejected"];
 
     mapping (address => Voter) voters;
 
     event voted(address indexed _voter, uint256 _vote);
+    event choiceApproved(string _status);
 
-    constructor(DAO _dao, DAOToken _daoToken, MintTokenChoice _mintTokenChoice) public {
+    constructor(DAO _dao, DAOToken _daoToken, uint256 _approvalThreshold) public { //MintTokenChoice _mintTokenChoice //votingMechanism
         dao = _dao;
         daoToken = _daoToken;
-        mintTokenChoice = _mintTokenChoice;
+        // mintTokenChoice = _mintTokenChoice;
         choice.status = validStatus[0];
+        choice.approvalThreshold = _approvalThreshold;
     }
 
     function vote(address _voter, uint256 _vote)
@@ -61,9 +63,16 @@ contract Choice {
         return choice.voteCount;
     }
 
-    function checkIfVotePassed() public returns(bool){
-        if(choice.voteCount==choice.approvalPercetage) {
-            mintTokenChoice.approveChoice(dao);
+    function getVoteStatus() public view returns(string memory) {
+        return choice.status;
+    }
+
+    function checkIfVotePassed() private returns(bool){
+        if(choice.voteCount==choice.approvalThreshold) {
+            choice.status = "approved";
+            emit choiceApproved(choice.status);
+            //mintTokenChoice.approveChoice(dao);
+            return true;
         }
     }
 

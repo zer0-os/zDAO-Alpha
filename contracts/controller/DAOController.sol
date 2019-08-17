@@ -74,7 +74,7 @@ contract DAOController {
 
     function mintTokens(DAO _dao, address _beneficiary, uint256 _amount)
     external
-    PermissionToMintToken()
+    // PermissionToMintToken()
     returns(bool)
     {
         emit MintTokens(msg.sender, _beneficiary, _amount); //add isvalidDao
