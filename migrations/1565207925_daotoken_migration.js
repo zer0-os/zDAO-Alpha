@@ -7,7 +7,7 @@ let TokenMinter = artifacts.require("./TokenMinter");
 let Choice = artifacts.require("./Choice");
 let MintTokenChoice = artifacts.require("./MintTokenChoice");
 
-let daoName = "0x44414f0000000000000000000000000000000000000000000000000000000000";
+let daoName = "Zero";
 let tokenName = "Infinity";
 let tokenSymbol = "INI";
 let isTransferable = false;
@@ -49,7 +49,7 @@ module.exports = function(deployer) {
     // let DAOTokenInstance = await DAOToken.at(daoToken);
     // let DAOInstance = await DAO.at(dao);
 
-    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dao, daoToken, dc.address, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
+    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dc.address, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
     // let choiceInstance = await deployer.deploy(Choice, dao, daoToken, 1, mintTokenChoice.address);
 
     //Console.log

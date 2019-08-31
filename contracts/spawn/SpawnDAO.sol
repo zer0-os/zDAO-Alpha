@@ -14,7 +14,7 @@ contract SpawnDAO {
     }
 
     function spawn(
-        bytes32 _daoName,
+        string calldata _daoName,
         string calldata _tokenName,
         string calldata _tokenSymbol,
         bool _isTransferable,
@@ -29,7 +29,7 @@ contract SpawnDAO {
     }
 
     function _spawn (
-        bytes32 _daoName,
+        string memory _daoName,
         string memory _tokenName,
         string memory _tokenSymbol,
         bool _isTransferable,

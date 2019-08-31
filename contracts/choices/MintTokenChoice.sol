@@ -4,8 +4,7 @@ import "./Choice.sol";
 import "./ChoiceType.sol";
 import "../controller/DAO.sol";
 import "../controller/DAOController.sol";
-
-
+    
 contract MintTokenChoice is ChoiceType {
 
     DAO public dao;
@@ -24,9 +23,9 @@ contract MintTokenChoice is ChoiceType {
 
     MintTokensToAddress mintTokensToAddress;
 
-    constructor(DAO _dao, DAOToken _daoToken, DAOController _daoController, address _beneficiary, uint256 _amount) public {
-        dao = _dao;
-        daoToken = _daoToken;
+    constructor(DAOController _daoController, address _beneficiary, uint256 _amount) public {
+        dao = _daoController.dao();
+        daoToken = _daoController.daoToken();
         daoController = _daoController;
         mintTokensToAddress.beneficiary = _beneficiary;
         mintTokensToAddress.amount = _amount;

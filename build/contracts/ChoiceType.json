@@ -25,6 +25,7 @@
       "type": "function"
     }
   ],
+  "metadata": "",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -58,7 +59,7 @@
         "id": 301,
         "nodeType": "ImportDirective",
         "scope": 312,
-        "sourceUnit": 655,
+        "sourceUnit": 677,
         "src": "25:31:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -99,7 +100,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$654",
+                    "typeIdentifier": "t_contract$_DAO_$676",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
@@ -107,10 +108,10 @@
                     "id": 302,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 654,
+                    "referencedDeclaration": 676,
                     "src": "107:3:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$654",
+                      "typeIdentifier": "t_contract$_DAO_$676",
                       "typeString": "contract DAO"
                     }
                   },
@@ -219,7 +220,7 @@
         "id": 301,
         "nodeType": "ImportDirective",
         "scope": 312,
-        "sourceUnit": 655,
+        "sourceUnit": 677,
         "src": "25:31:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -260,7 +261,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_DAO_$654",
+                    "typeIdentifier": "t_contract$_DAO_$676",
                     "typeString": "contract DAO"
                   },
                   "typeName": {
@@ -268,10 +269,10 @@
                     "id": 302,
                     "name": "DAO",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 654,
+                    "referencedDeclaration": 676,
                     "src": "107:3:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_DAO_$654",
+                      "typeIdentifier": "t_contract$_DAO_$676",
                       "typeString": "contract DAO"
                     }
                   },
@@ -357,16 +358,9 @@
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0x96F8C1C6B99765Ec20A82e226C178A9be5A88F30",
-      "transactionHash": "0x5f36b44a937d3ee0390473c81c6eec0ba8e7b5d3ff7abcf2353f937ca8b540e9"
-    }
-  },
-  "schemaVersion": "3.0.0",
-  "updatedAt": "2019-08-17T19:40:52.040Z",
+  "networks": {},
+  "schemaVersion": "3.0.14",
+  "updatedAt": "2019-08-31T19:03:27.769Z",
   "devdoc": {
     "methods": {}
   },

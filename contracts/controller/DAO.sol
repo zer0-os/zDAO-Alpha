@@ -4,7 +4,7 @@ import "./DAOToken.sol";
 
 contract DAO is Ownable {
 
-    bytes32 public daoName;
+    string public daoName;
     DAOToken public daoToken;
     mapping (address => DAOToken) daoTokens;
 
@@ -14,7 +14,7 @@ contract DAO is Ownable {
     event ExternalTokenApproval(address indexed _externalToken, address _spender, uint256 _value);
     event ReceiveEther(address indexed _sender, uint256 _value);
 
-    constructor(bytes32 _daoName, DAOToken _daoToken) public {
+    constructor(string memory _daoName, DAOToken _daoToken) public {
         daoName = _daoName;
         daoToken = _daoToken;
     }

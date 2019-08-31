@@ -19,21 +19,18 @@ contract DAOController {
     mapping(address => Neuron) neurons;
     address[] public neuronList;
 
-    // event AddGlobalConstraint(address indexed _globalConstraint, bytes32 _params, GlobalConstraintInterface.CallPhase _when);
-    // event RemoveGlobalConstraint(address indexed _globalConstraint, uint256 _index, bool _isPre);
     event MintTokens (address indexed _sender, address indexed _beneficiary, uint256 _amount);
     event BurnTokens (address indexed _sender, uint256 _amount);
     event BurnTokensFrom (address indexed _sender, address indexed _account, uint256 _amount);
     event ActivateNeuron (address indexed _sender, address indexed _neuron);
     event DeactivateNeuron (address indexed _sender, address indexed neuron);
-    // event UpgradeController(address indexed _oldController, address _newController);
 
     constructor(DAO _dao) public {
         dao = _dao;
         daoToken = dao.daoToken();
     }
 
-    function getName() public view PermissionToTransferToken() returns (bytes32) {
+    function getName() public view PermissionToTransferToken() returns (string memory) {
         return dao.daoName();
     }
 

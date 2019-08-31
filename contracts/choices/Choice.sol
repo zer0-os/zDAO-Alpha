@@ -5,7 +5,7 @@ import "./MintTokenChoice.sol";
 import "../controller/DAO.sol";
 
 contract Choice {
-
+    
     DAO public dao;
     DAOToken public daoToken;
     ChoiceType public choiceType;
@@ -34,7 +34,7 @@ contract Choice {
 
     event voted(address indexed _voter, uint256 _vote);
     event choiceApproved(string _status);
-
+    
     constructor(DAO _dao, DAOToken _daoToken, uint256 _approvalThreshold, address _choiceType)
     public{
         dao = _dao;
