@@ -5547,8 +5547,8 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.14",
-  "updatedAt": "2019-08-31T19:03:43.508Z",
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-09-18T00:51:49.668Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

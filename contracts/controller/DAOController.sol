@@ -1,7 +1,9 @@
 pragma solidity ^0.5.0;
 
 import "./DAO.sol";
+import "./DAOToken.sol";
 import "../spawn/SpawnDAO.sol";
+import "../spawn/SpawnController.sol";
 
 contract DAOController {
 
@@ -15,6 +17,7 @@ contract DAOController {
 
     DAO public dao;
     DAOToken public daoToken;
+    address public daoController;
 
     mapping(address => Neuron) neurons;
     address[] public neuronList;

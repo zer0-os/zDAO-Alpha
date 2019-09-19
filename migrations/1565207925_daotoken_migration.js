@@ -4,15 +4,13 @@ let DAOController = artifacts.require("./DAOController.sol");
 let SpawnController = artifacts.require("./SpawnController.sol");
 let SpawnDAO = artifacts.require("./SpawnDAO.sol");
 let TokenMinter = artifacts.require("./TokenMinter");
-let Choice = artifacts.require("./Choice");
 let MintTokenChoice = artifacts.require("./MintTokenChoice");
 
 let daoName = "Zero";
 let tokenName = "Infinity";
 let tokenSymbol = "INI";
 let isTransferable = false;
-let cap = "100000000"; //0xz84595161401484A000000
-
+let cap = "100000000";
 
 module.exports = function(deployer) {
   // Init Base Controller
@@ -23,43 +21,30 @@ module.exports = function(deployer) {
 
     // Init DAO with DAOToken
     var spawnDAO = await SpawnDAO.deployed();
-    var returnedParams = await spawnDAO.spawn(daoName, tokenName, tokenSymbol, isTransferable, cap);
+    await spawnDAO.spawn(daoName, tokenName, tokenSymbol, isTransferable, cap);
     
     // Init Controller for DAO
-    let da = await spawnDAO.daoController();
-    let dc = await DAOController.at(da);
-
+    let initDaoController = await spawnDAO.daoController();
+    let daoController = await DAOController.at(initDaoController);
 
     // Mint Tokens
-    let mt = await deployer.deploy(TokenMinter, dc.address);
-    let tmDeployed = await TokenMinter.deployed();
-
+    await deployer.deploy(TokenMinter, daoController.address);
+    let tokenMinter = await TokenMinter.deployed();
 
     // Init Default Neurons
-    dc.activateNeuron(dc.address, "DAOController", "0x00000010");
-    dc.activateNeuron(tmDeployed.address, "TokenMinter", "0x00000010");
+    daoController.activateNeuron(daoController.address, "DAOController", "0x00000010");
+    daoController.activateNeuron(tokenMinter.address, "TokenMinter", "0x00000010");    
 
-    // tmDeployed.MintTokens(da, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 1337);
-    
-    
-    //Deploy Choice
-    let daoToken = await dc.daoToken();
-    let dao = await dc.dao();
+    // Init Choice
+    let mintTokenChoice = await deployer.deploy(MintTokenChoice, daoController.address, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
 
-    // let DAOTokenInstance = await DAOToken.at(daoToken);
-    // let DAOInstance = await DAO.at(dao);
-
-    let mintTokenChoice = await deployer.deploy(MintTokenChoice, dc.address, "0xe7c39B17396ccf22ccAb2EF19d3525Ef231b6920", 3457);
-    // let choiceInstance = await deployer.deploy(Choice, dao, daoToken, 1, mintTokenChoice.address);
-
-    //Console.log
-    let a = await console.log("dc: " + dc.address);
-    let b = await console.log("tm: " + tmDeployed.address);
-    let c = console.log("dt: " + await dc.daoToken());
-    let d = console.log("dao: " + await dc.dao());
-    // let e = console.log("c: " + await choiceInstance.address);
-    let f = console.log("mtc: " + await mintTokenChoice.address);
-    // let g = console.log(DAOInstance);
-
+    // Contract Addresses
+    await console.log("DAOController: " + daoController.address);
+    await console.log("DAOToken: " + await daoController.daoToken());
+    await console.log("DAO: " + await daoController.dao());
+    await console.log("TokenMinter: " + tokenMinter.address);
+    await console.log("MintTokenChoice: " + await mintTokenChoice.address);
+    await console.log("SpawnController: " + spawnController.address);
+    await console.log("SpawnDAO: " + spawnDAO.address);
   });
 };

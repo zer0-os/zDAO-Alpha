@@ -4,7 +4,7 @@ import "./Choice.sol";
 import "./ChoiceType.sol";
 import "../controller/DAO.sol";
 import "../controller/DAOController.sol";
-    
+
 contract MintTokenChoice is ChoiceType {
 
     DAO public dao;
